@@ -1,33 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tags on Keruone&#39;s 个人小记</title>
+    <title>Tags on PKER&#39;s 个人小记</title>
     <link>https://hitcjj.github.io/tags/</link>
-    <description>Recent content in Tags on Keruone&#39;s 个人小记</description>
-    <generator>Hugo</generator>
+    <description>Recent content in Tags on PKER&#39;s 个人小记</description>
+    <generator>Hugo -- 0.147.7</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 15 Mar 2023 11:00:00 -0700</lastBuildDate>
     <atom:link href="https://hitcjj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Blue</title>
-      <link>https://hitcjj.github.io/tags/blue/</link>
-      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-      <guid>https://hitcjj.github.io/tags/blue/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Green</title>
-      <link>https://hitcjj.github.io/tags/green/</link>
-      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-      <guid>https://hitcjj.github.io/tags/green/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Red</title>
-      <link>https://hitcjj.github.io/tags/red/</link>
-      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-      <guid>https://hitcjj.github.io/tags/red/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>

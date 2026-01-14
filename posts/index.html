@@ -1,63 +1,245 @@
 <!DOCTYPE html>
-<html lang="zh-CN" dir="ltr">
-<head>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>Posts | Keruone&#39;s 个人小记</title>
+<html lang="zh" dir="auto" data-theme="auto">
 
-      <link rel="stylesheet" href="/css/main.min.73be4799b2091d293b47b52ca2642fe82aa2b1c9c050e8d1b389a80939a30dd4.css" integrity="sha256-c75HmbIJHSk7R7UsomQv6CqiscnAUOjRs4moCTmjDdQ=" crossorigin="anonymous">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Posts | PKER&#39;s 个人小记</title>
+<meta name="keywords" content="">
+<meta name="description" content="Posts - PKER&#39;s 个人小记">
+<meta name="author" content="">
+<link rel="canonical" href="https://hitcjj.github.io/posts/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.c2189e7d36d72767de292f8b9d897e4a464aa5bc7eb692cda50064f5eb9eeece.css" integrity="sha256-whiefTbXJ2feKS&#43;LnYl&#43;SkZKpbx&#43;tpLNpQBk9eue7s4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://hitcjj.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://hitcjj.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://hitcjj.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://hitcjj.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://hitcjj.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://hitcjj.github.io/posts/index.xml" title="rss">
+<link rel="alternate" hreflang="zh" href="https://hitcjj.github.io/posts/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://hitcjj.github.io/posts/">
+  <meta property="og:site_name" content="PKER&#39;s 个人小记">
+  <meta property="og:title" content="Posts">
+  <meta property="og:description" content="我的个人笔记站点">
+  <meta property="og:locale" content="zh-CN">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Posts">
+<meta name="twitter:description" content="我的个人笔记站点">
 
 
-      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
-
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://hitcjj.github.io/posts/"
+    }
+  ]
+}
+</script>
 </head>
-<body>
-  <header>
-    <h1>Keruone&#39;s 个人小记</h1>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://hitcjj.github.io/" accesskey="h" title="PKER&#39;s 个人小记 (Alt + H)">PKER&#39;s 个人小记</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://hitcjj.github.io/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://hitcjj.github.io/posts/" title="笔记">
+                    <span class="active">笔记</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://hitcjj.github.io/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Posts
+  </h1>
+</header>
 
-  <nav>
-    <ul>
-    <li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a aria-current="page" class="active" href="/posts/">Posts</a>
-    </li>
-    <li>
-      <a href="/tags/">Tags</a>
-    </li>
-    </ul>
-  </nav>
-
-
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">我的第一篇笔记
+    </h2>
   </header>
-  <main>
+  <div class="entry-content">
+    <p>我的第一篇笔记 这是我的测试笔记内容，支持Markdown格式：
+列表项1 加粗文字 </p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-14 12:00:00 +0800 CST'>2026年1月14日</span></footer>
+  <a class="entry-link" aria-label="post link to 我的第一篇笔记" href="https://hitcjj.github.io/posts/2026-01-14-%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/"></a>
+</article>
+    </main>
     
-  <h1>Posts</h1>
-  <p>Tempor est exercitation ad qui pariatur quis adipisicing aliquip nisi ea consequat ipsum occaecat. Nostrud consequat ullamco laboris fugiat esse esse adipisicing velit laborum ipsum incididunt ut enim. Dolor pariatur nulla quis fugiat dolore excepteur. Aliquip ad quis aliqua enim do consequat.</p>
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://hitcjj.github.io/">PKER&#39;s 个人小记</a></span> · 
 
-  
-    <h2><a href="/posts/2026-01-14-%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/">我的第一篇笔记</a></h2>
-    我的第一篇笔记 这是我的测试笔记内容，支持Markdown格式：
-列表项1 加粗文字 
-  
-    <h2><a href="/posts/post-3/">Post 3</a></h2>
-    Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum.
-  
-    <h2><a href="/posts/post-2/">Post 2</a></h2>
-    Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.
-Exercitation voluptate irure in irure tempor mollit Lorem nostrud ad officia.
-  
-    <h2><a href="/posts/post-1/">Post 1</a></h2>
-    Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.
-Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea.
-  
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-  </main>
-  <footer>
-    <p>Copyright 2026. All rights reserved.</p>
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
 
-  </footer>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
+
 </html>
