@@ -5,13 +5,30 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>我的第一篇笔记 | PKER&#39;s 个人小记</title>
+<title>代码随想录训练营第一天 | PKER&#39;s 个人小记</title>
 <meta name="keywords" content="">
-<meta name="description" content="我的第一篇笔记
-这是我的测试笔记内容，支持Markdown格式：
-
-列表项1
-加粗文字
+<meta name="description" content="代码随想录训练营第一天
+##题目 704. 二分查找
+#注意点：左闭右闭的理解：左右都属于有效访问，所以left&lt;=right需要等号，right=mid-1
+左闭右开,右边无效，因此不用等号，right=mid
+解题代码（c&#43;&#43;）
+def binary_search(nums, target):
+    &#34;&#34;&#34;
+    二分查找实现：有序数组中查找目标值
+    :param nums: 升序排列的整型数组
+    :param target: 要查找的目标值
+    :return: 目标值下标，不存在则返回-1
+    &#34;&#34;&#34;
+    left, right = 0, len(nums) - 1
+    while left &lt;= right:
+        mid = (left &#43; right) // 2  # 避免溢出也可以写 left &#43; (right - left) // 2
+        if nums[mid] == target:
+            return mid
+        elif nums[mid] &lt; target:
+            left = mid &#43; 1
+        else:
+            right = mid - 1
+    return -1
 ">
 <meta name="author" content="">
 <link rel="canonical" href="https://hitcjj.github.io/posts/2026-01-14-%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/">
@@ -77,21 +94,39 @@
 
 </script><meta property="og:url" content="https://hitcjj.github.io/posts/2026-01-14-%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/">
   <meta property="og:site_name" content="PKER&#39;s 个人小记">
-  <meta property="og:title" content="我的第一篇笔记">
-  <meta property="og:description" content="我的第一篇笔记 这是我的测试笔记内容，支持Markdown格式：
-列表项1 加粗文字 ">
+  <meta property="og:title" content="代码随想录训练营第一天">
+  <meta property="og:description" content="代码随想录训练营第一天 ##题目 704. 二分查找
+#注意点：左闭右闭的理解：左右都属于有效访问，所以left&lt;=right需要等号，right=mid-1 左闭右开,右边无效，因此不用等号，right=mid
+解题代码（c&#43;&#43;） def binary_search(nums, target): &#34;&#34;&#34; 二分查找实现：有序数组中查找目标值 :param nums: 升序排列的整型数组 :param target: 要查找的目标值 :return: 目标值下标，不存在则返回-1 &#34;&#34;&#34; left, right = 0, len(nums) - 1 while left &lt;= right: mid = (left &#43; right) // 2 # 避免溢出也可以写 left &#43; (right - left) // 2 if nums[mid] == target: return mid elif nums[mid] &lt; target: left = mid &#43; 1 else: right = mid - 1 return -1 ">
   <meta property="og:locale" content="zh-CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2026-01-14T12:00:00+08:00">
     <meta property="article:modified_time" content="2026-01-14T12:00:00+08:00">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一篇笔记">
-<meta name="twitter:description" content="我的第一篇笔记
-这是我的测试笔记内容，支持Markdown格式：
-
-列表项1
-加粗文字
+<meta name="twitter:title" content="代码随想录训练营第一天">
+<meta name="twitter:description" content="代码随想录训练营第一天
+##题目 704. 二分查找
+#注意点：左闭右闭的理解：左右都属于有效访问，所以left&lt;=right需要等号，right=mid-1
+左闭右开,右边无效，因此不用等号，right=mid
+解题代码（c&#43;&#43;）
+def binary_search(nums, target):
+    &#34;&#34;&#34;
+    二分查找实现：有序数组中查找目标值
+    :param nums: 升序排列的整型数组
+    :param target: 要查找的目标值
+    :return: 目标值下标，不存在则返回-1
+    &#34;&#34;&#34;
+    left, right = 0, len(nums) - 1
+    while left &lt;= right:
+        mid = (left &#43; right) // 2  # 避免溢出也可以写 left &#43; (right - left) // 2
+        if nums[mid] == target:
+            return mid
+        elif nums[mid] &lt; target:
+            left = mid &#43; 1
+        else:
+            right = mid - 1
+    return -1
 ">
 
 
@@ -109,7 +144,7 @@
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "我的第一篇笔记",
+      "name": "代码随想录训练营第一天",
       "item": "https://hitcjj.github.io/posts/2026-01-14-%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/"
     }
   ]
@@ -119,14 +154,14 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "我的第一篇笔记",
-  "name": "我的第一篇笔记",
-  "description": "我的第一篇笔记 这是我的测试笔记内容，支持Markdown格式：\n列表项1 加粗文字 ",
+  "headline": "代码随想录训练营第一天",
+  "name": "代码随想录训练营第一天",
+  "description": "代码随想录训练营第一天 ##题目 704. 二分查找\n#注意点：左闭右闭的理解：左右都属于有效访问，所以left\u0026lt;=right需要等号，right=mid-1 左闭右开,右边无效，因此不用等号，right=mid\n解题代码（c++） def binary_search(nums, target): \u0026#34;\u0026#34;\u0026#34; 二分查找实现：有序数组中查找目标值 :param nums: 升序排列的整型数组 :param target: 要查找的目标值 :return: 目标值下标，不存在则返回-1 \u0026#34;\u0026#34;\u0026#34; left, right = 0, len(nums) - 1 while left \u0026lt;= right: mid = (left + right) // 2 # 避免溢出也可以写 left + (right - left) // 2 if nums[mid] == target: return mid elif nums[mid] \u0026lt; target: left = mid + 1 else: right = mid - 1 return -1 ",
   "keywords": [
     
   ],
-  "articleBody": "我的第一篇笔记 这是我的测试笔记内容，支持Markdown格式：\n列表项1 加粗文字 ",
-  "wordCount" : "4",
+  "articleBody": "代码随想录训练营第一天 ##题目 704. 二分查找\n#注意点：左闭右闭的理解：左右都属于有效访问，所以left\u003c=right需要等号，right=mid-1 左闭右开,右边无效，因此不用等号，right=mid\n解题代码（c++） def binary_search(nums, target): \"\"\" 二分查找实现：有序数组中查找目标值 :param nums: 升序排列的整型数组 :param target: 要查找的目标值 :return: 目标值下标，不存在则返回-1 \"\"\" left, right = 0, len(nums) - 1 while left \u003c= right: mid = (left + right) // 2 # 避免溢出也可以写 left + (right - left) // 2 if nums[mid] == target: return mid elif nums[mid] \u003c target: left = mid + 1 else: right = mid - 1 return -1 ",
+  "wordCount" : "71",
   "inLanguage": "zh",
   "datePublished": "2026-01-14T12:00:00+08:00",
   "dateModified": "2026-01-14T12:00:00+08:00",
@@ -198,19 +233,35 @@
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      我的第一篇笔记
+      代码随想录训练营第一天
     </h1>
     <div class="post-meta"><span title='2026-01-14 12:00:00 +0800 CST'>2026年1月14日</span>
 
 </div>
   </header> 
-  <div class="post-content"><h1 id="我的第一篇笔记">我的第一篇笔记<a hidden class="anchor" aria-hidden="true" href="#我的第一篇笔记">#</a></h1>
-<p>这是我的测试笔记内容，支持Markdown格式：</p>
-<ul>
-<li>列表项1</li>
-<li><strong>加粗文字</strong></li>
-</ul>
-
+  <div class="post-content"><h1 id="代码随想录训练营第一天">代码随想录训练营第一天<a hidden class="anchor" aria-hidden="true" href="#代码随想录训练营第一天">#</a></h1>
+<p>##题目 <a href="https://leetcode.cn/problems/binary-search/description/">704. 二分查找</a></p>
+<p>#注意点：左闭右闭的理解：左右都属于有效访问，所以left&lt;=right需要等号，right=mid-1
+左闭右开,右边无效，因此不用等号，right=mid</p>
+<h4 id="解题代码c">解题代码（c++）<a hidden class="anchor" aria-hidden="true" href="#解题代码c">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">binary_search</span>(nums, target):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    二分查找实现：有序数组中查找目标值
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    :param nums: 升序排列的整型数组
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    :param target: 要查找的目标值
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    :return: 目标值下标，不存在则返回-1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(nums) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;=</span> right:
+</span></span><span style="display:flex;"><span>        mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>  <span style="color:#75715e"># 避免溢出也可以写 left + (right - left) // 2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> nums[mid] <span style="color:#f92672">==</span> target:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> mid
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> nums[mid] <span style="color:#f92672">&lt;</span> target:
+</span></span><span style="display:flex;"><span>            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div>
 
   </div>
 
