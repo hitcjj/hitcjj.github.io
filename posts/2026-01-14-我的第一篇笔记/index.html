@@ -29,6 +29,26 @@ def binary_search(nums, target):
         else:
             right = mid - 1
     return -1
+##题目27.移除元素
+#注意不要死循环
+int removeElement(vector&lt;int&gt;&amp; nums, int val) {
+        int n=nums.size();
+        int i=0;
+        while(i&lt;n)
+        {
+            if(nums[i]==val)
+            {
+                n--;
+                for(int j=i;j&lt;nums.size()-1;j&#43;&#43;)
+                {
+                    nums[j]=nums[j&#43;1];
+                }
+            }
+            else{
+                i&#43;&#43;;
+            }
+        }
+        return n;
 ">
 <meta name="author" content="">
 <link rel="canonical" href="https://hitcjj.github.io/posts/2026-01-14-%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/">
@@ -97,7 +117,9 @@ def binary_search(nums, target):
   <meta property="og:title" content="代码随想录训练营第一天">
   <meta property="og:description" content="代码随想录训练营第一天 ##题目 704. 二分查找
 #注意点：左闭右闭的理解：左右都属于有效访问，所以left&lt;=right需要等号，right=mid-1 左闭右开,右边无效，因此不用等号，right=mid
-解题代码（c&#43;&#43;） def binary_search(nums, target): &#34;&#34;&#34; 二分查找实现：有序数组中查找目标值 :param nums: 升序排列的整型数组 :param target: 要查找的目标值 :return: 目标值下标，不存在则返回-1 &#34;&#34;&#34; left, right = 0, len(nums) - 1 while left &lt;= right: mid = (left &#43; right) // 2 # 避免溢出也可以写 left &#43; (right - left) // 2 if nums[mid] == target: return mid elif nums[mid] &lt; target: left = mid &#43; 1 else: right = mid - 1 return -1 ">
+解题代码（c&#43;&#43;） def binary_search(nums, target): &#34;&#34;&#34; 二分查找实现：有序数组中查找目标值 :param nums: 升序排列的整型数组 :param target: 要查找的目标值 :return: 目标值下标，不存在则返回-1 &#34;&#34;&#34; left, right = 0, len(nums) - 1 while left &lt;= right: mid = (left &#43; right) // 2 # 避免溢出也可以写 left &#43; (right - left) // 2 if nums[mid] == target: return mid elif nums[mid] &lt; target: left = mid &#43; 1 else: right = mid - 1 return -1 ##题目27.移除元素
+#注意不要死循环
+int removeElement(vector&lt;int&gt;&amp; nums, int val) { int n=nums.size(); int i=0; while(i&lt;n) { if(nums[i]==val) { n--; for(int j=i;j&lt;nums.size()-1;j&#43;&#43;) { nums[j]=nums[j&#43;1]; } } else{ i&#43;&#43;; } } return n; ">
   <meta property="og:locale" content="zh-CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -127,6 +149,26 @@ def binary_search(nums, target):
         else:
             right = mid - 1
     return -1
+##题目27.移除元素
+#注意不要死循环
+int removeElement(vector&lt;int&gt;&amp; nums, int val) {
+        int n=nums.size();
+        int i=0;
+        while(i&lt;n)
+        {
+            if(nums[i]==val)
+            {
+                n--;
+                for(int j=i;j&lt;nums.size()-1;j&#43;&#43;)
+                {
+                    nums[j]=nums[j&#43;1];
+                }
+            }
+            else{
+                i&#43;&#43;;
+            }
+        }
+        return n;
 ">
 
 
@@ -156,12 +198,12 @@ def binary_search(nums, target):
   "@type": "BlogPosting",
   "headline": "代码随想录训练营第一天",
   "name": "代码随想录训练营第一天",
-  "description": "代码随想录训练营第一天 ##题目 704. 二分查找\n#注意点：左闭右闭的理解：左右都属于有效访问，所以left\u0026lt;=right需要等号，right=mid-1 左闭右开,右边无效，因此不用等号，right=mid\n解题代码（c++） def binary_search(nums, target): \u0026#34;\u0026#34;\u0026#34; 二分查找实现：有序数组中查找目标值 :param nums: 升序排列的整型数组 :param target: 要查找的目标值 :return: 目标值下标，不存在则返回-1 \u0026#34;\u0026#34;\u0026#34; left, right = 0, len(nums) - 1 while left \u0026lt;= right: mid = (left + right) // 2 # 避免溢出也可以写 left + (right - left) // 2 if nums[mid] == target: return mid elif nums[mid] \u0026lt; target: left = mid + 1 else: right = mid - 1 return -1 ",
+  "description": "代码随想录训练营第一天 ##题目 704. 二分查找\n#注意点：左闭右闭的理解：左右都属于有效访问，所以left\u0026lt;=right需要等号，right=mid-1 左闭右开,右边无效，因此不用等号，right=mid\n解题代码（c++） def binary_search(nums, target): \u0026#34;\u0026#34;\u0026#34; 二分查找实现：有序数组中查找目标值 :param nums: 升序排列的整型数组 :param target: 要查找的目标值 :return: 目标值下标，不存在则返回-1 \u0026#34;\u0026#34;\u0026#34; left, right = 0, len(nums) - 1 while left \u0026lt;= right: mid = (left + right) // 2 # 避免溢出也可以写 left + (right - left) // 2 if nums[mid] == target: return mid elif nums[mid] \u0026lt; target: left = mid + 1 else: right = mid - 1 return -1 ##题目27.移除元素\n#注意不要死循环\nint removeElement(vector\u0026lt;int\u0026gt;\u0026amp; nums, int val) { int n=nums.size(); int i=0; while(i\u0026lt;n) { if(nums[i]==val) { n--; for(int j=i;j\u0026lt;nums.size()-1;j++) { nums[j]=nums[j+1]; } } else{ i++; } } return n; ",
   "keywords": [
     
   ],
-  "articleBody": "代码随想录训练营第一天 ##题目 704. 二分查找\n#注意点：左闭右闭的理解：左右都属于有效访问，所以left\u003c=right需要等号，right=mid-1 左闭右开,右边无效，因此不用等号，right=mid\n解题代码（c++） def binary_search(nums, target): \"\"\" 二分查找实现：有序数组中查找目标值 :param nums: 升序排列的整型数组 :param target: 要查找的目标值 :return: 目标值下标，不存在则返回-1 \"\"\" left, right = 0, len(nums) - 1 while left \u003c= right: mid = (left + right) // 2 # 避免溢出也可以写 left + (right - left) // 2 if nums[mid] == target: return mid elif nums[mid] \u003c target: left = mid + 1 else: right = mid - 1 return -1 ",
-  "wordCount" : "71",
+  "articleBody": "代码随想录训练营第一天 ##题目 704. 二分查找\n#注意点：左闭右闭的理解：左右都属于有效访问，所以left\u003c=right需要等号，right=mid-1 左闭右开,右边无效，因此不用等号，right=mid\n解题代码（c++） def binary_search(nums, target): \"\"\" 二分查找实现：有序数组中查找目标值 :param nums: 升序排列的整型数组 :param target: 要查找的目标值 :return: 目标值下标，不存在则返回-1 \"\"\" left, right = 0, len(nums) - 1 while left \u003c= right: mid = (left + right) // 2 # 避免溢出也可以写 left + (right - left) // 2 if nums[mid] == target: return mid elif nums[mid] \u003c target: left = mid + 1 else: right = mid - 1 return -1 ##题目27.移除元素\n#注意不要死循环\nint removeElement(vector\u0026 nums, int val) { int n=nums.size(); int i=0; while(i",
+  "wordCount" : "100",
   "inLanguage": "zh",
   "datePublished": "2026-01-14T12:00:00+08:00",
   "dateModified": "2026-01-14T12:00:00+08:00",
@@ -261,7 +303,27 @@ def binary_search(nums, target):
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
 </span></span><span style="display:flex;"><span>            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><p>##题目<a href="https://leetcode.cn/problems/remove-element/description/">27.移除元素</a></p>
+<p>#注意不要死循环</p>
+<pre tabindex="0"><code>int removeElement(vector&lt;int&gt;&amp; nums, int val) {
+        int n=nums.size();
+        int i=0;
+        while(i&lt;n)
+        {
+            if(nums[i]==val)
+            {
+                n--;
+                for(int j=i;j&lt;nums.size()-1;j++)
+                {
+                    nums[j]=nums[j+1];
+                }
+            }
+            else{
+                i++;
+            }
+        }
+        return n;
+</code></pre>
 
   </div>
 

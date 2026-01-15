@@ -153,13 +153,30 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">代码随想录训练营第2天
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>##题目203.移除链表元素
+注意点：如果头节点可能被删除，那么要在头节点之前添加一个哨兵节点，这样我们无需特判头节点被删除的情况
+/** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode* removeElements(ListNode* head, int val) { if(!head) return nullptr; auto new_head=new ListNode(0,head); auto p=new_head; while(p-&gt;next) { if(p-&gt;next-&gt;val==val) { p-&gt;next=p-&gt;next-&gt;next; } else{ p=p-&gt;next; } } return new_head-&gt;next; } }; #题目 707.设计链表 #边界条件很容易错误
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-14 12:00:00 +0800 CST'>2026年1月14日</span></footer>
+  <a class="entry-link" aria-label="post link to 代码随想录训练营第2天" href="https://hitcjj.github.io/posts/2026_1_15%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AC%94%E8%AE%B0/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">代码随想录训练营第一天
     </h2>
   </header>
   <div class="entry-content">
     <p>代码随想录训练营第一天 ##题目 704. 二分查找
 #注意点：左闭右闭的理解：左右都属于有效访问，所以left&lt;=right需要等号，right=mid-1 左闭右开,右边无效，因此不用等号，right=mid
-解题代码（c&#43;&#43;） def binary_search(nums, target): &#34;&#34;&#34; 二分查找实现：有序数组中查找目标值 :param nums: 升序排列的整型数组 :param target: 要查找的目标值 :return: 目标值下标，不存在则返回-1 &#34;&#34;&#34; left, right = 0, len(nums) - 1 while left &lt;= right: mid = (left &#43; right) // 2 # 避免溢出也可以写 left &#43; (right - left) // 2 if nums[mid] == target: return mid elif nums[mid] &lt; target: left = mid &#43; 1 else: right = mid - 1 return -1 </p>
+解题代码（c&#43;&#43;） def binary_search(nums, target): &#34;&#34;&#34; 二分查找实现：有序数组中查找目标值 :param nums: 升序排列的整型数组 :param target: 要查找的目标值 :return: 目标值下标，不存在则返回-1 &#34;&#34;&#34; left, right = 0, len(nums) - 1 while left &lt;= right: mid = (left &#43; right) // 2 # 避免溢出也可以写 left &#43; (right - left) // 2 if nums[mid] == target: return mid elif nums[mid] &lt; target: left = mid &#43; 1 else: right = mid - 1 return -1 ##题目27.移除元素
+#注意不要死循环
+int removeElement(vector&lt;int&gt;&amp; nums, int val) { int n=nums.size(); int i=0; while(i&lt;n) { if(nums[i]==val) { n--; for(int j=i;j&lt;nums.size()-1;j&#43;&#43;) { nums[j]=nums[j&#43;1]; } } else{ i&#43;&#43;; } } return n; </p>
   </div>
   <footer class="entry-footer"><span title='2026-01-14 12:00:00 +0800 CST'>2026年1月14日</span></footer>
   <a class="entry-link" aria-label="post link to 代码随想录训练营第一天" href="https://hitcjj.github.io/posts/2026-01-14-%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AC%94%E8%AE%B0/"></a>

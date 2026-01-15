@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>代码随想录训练营第2天 | PKER&#39;s 个人小记</title>
+<meta name="keywords" content="">
+<meta name="description" content="##题目203.移除链表元素
+注意点：如果头节点可能被删除，那么要在头节点之前添加一个哨兵节点，这样我们无需特判头节点被删除的情况
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* removeElements(ListNode* head, int val) {
+        if(!head)
+        return nullptr;
+        auto new_head=new ListNode(0,head);
+        auto p=new_head;
+        while(p-&gt;next)
+        {
+            if(p-&gt;next-&gt;val==val)
+            {
+                p-&gt;next=p-&gt;next-&gt;next;
+            }
+            else{
+                p=p-&gt;next;
+            }
+        }
+        return new_head-&gt;next;
+    }
+};
+#题目 707.设计链表 
+#边界条件很容易错误">
+<meta name="author" content="">
+<link rel="canonical" href="https://hitcjj.github.io/posts/2026_1_15%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AC%94%E8%AE%B0/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.c2189e7d36d72767de292f8b9d897e4a464aa5bc7eb692cda50064f5eb9eeece.css" integrity="sha256-whiefTbXJ2feKS&#43;LnYl&#43;SkZKpbx&#43;tpLNpQBk9eue7s4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://hitcjj.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://hitcjj.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://hitcjj.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://hitcjj.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://hitcjj.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://hitcjj.github.io/posts/2026_1_15%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AC%94%E8%AE%B0/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://hitcjj.github.io/posts/2026_1_15%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AC%94%E8%AE%B0/">
+  <meta property="og:site_name" content="PKER&#39;s 个人小记">
+  <meta property="og:title" content="代码随想录训练营第2天">
+  <meta property="og:description" content="##题目203.移除链表元素
+注意点：如果头节点可能被删除，那么要在头节点之前添加一个哨兵节点，这样我们无需特判头节点被删除的情况
+/** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode* removeElements(ListNode* head, int val) { if(!head) return nullptr; auto new_head=new ListNode(0,head); auto p=new_head; while(p-&gt;next) { if(p-&gt;next-&gt;val==val) { p-&gt;next=p-&gt;next-&gt;next; } else{ p=p-&gt;next; } } return new_head-&gt;next; } }; #题目 707.设计链表 #边界条件很容易错误">
+  <meta property="og:locale" content="zh-CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-14T12:00:00+08:00">
+    <meta property="article:modified_time" content="2026-01-14T12:00:00+08:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="代码随想录训练营第2天">
+<meta name="twitter:description" content="##题目203.移除链表元素
+注意点：如果头节点可能被删除，那么要在头节点之前添加一个哨兵节点，这样我们无需特判头节点被删除的情况
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* removeElements(ListNode* head, int val) {
+        if(!head)
+        return nullptr;
+        auto new_head=new ListNode(0,head);
+        auto p=new_head;
+        while(p-&gt;next)
+        {
+            if(p-&gt;next-&gt;val==val)
+            {
+                p-&gt;next=p-&gt;next-&gt;next;
+            }
+            else{
+                p=p-&gt;next;
+            }
+        }
+        return new_head-&gt;next;
+    }
+};
+#题目 707.设计链表 
+#边界条件很容易错误">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://hitcjj.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "代码随想录训练营第2天",
+      "item": "https://hitcjj.github.io/posts/2026_1_15%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AC%94%E8%AE%B0/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "代码随想录训练营第2天",
+  "name": "代码随想录训练营第2天",
+  "description": "##题目203.移除链表元素\n注意点：如果头节点可能被删除，那么要在头节点之前添加一个哨兵节点，这样我们无需特判头节点被删除的情况\n/** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode* removeElements(ListNode* head, int val) { if(!head) return nullptr; auto new_head=new ListNode(0,head); auto p=new_head; while(p-\u0026gt;next) { if(p-\u0026gt;next-\u0026gt;val==val) { p-\u0026gt;next=p-\u0026gt;next-\u0026gt;next; } else{ p=p-\u0026gt;next; } } return new_head-\u0026gt;next; } }; #题目 707.设计链表 #边界条件很容易错误\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "##题目203.移除链表元素\n注意点：如果头节点可能被删除，那么要在头节点之前添加一个哨兵节点，这样我们无需特判头节点被删除的情况\n/** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode* removeElements(ListNode* head, int val) { if(!head) return nullptr; auto new_head=new ListNode(0,head); auto p=new_head; while(p-\u003enext) { if(p-\u003enext-\u003eval==val) { p-\u003enext=p-\u003enext-\u003enext; } else{ p=p-\u003enext; } } return new_head-\u003enext; } }; #题目 707.设计链表 #边界条件很容易错误\ntypedef struct MyListNode{\rint val;\rstruct MyListNode* next;\r}MyListNode;\rclass MyLinkedList {\rpublic:\rMyListNode* head;\rMyLinkedList() {\rhead=new MyListNode(-1,nullptr);\r}\rint get(int index) {\rif(index\u003e=head-\u003eval+1)\rreturn -1;\rauto p=head;\rfor(int i=-1;inext;\r}\rreturn p-\u003eval;\r}\rvoid addAtHead(int val) {\rMyListNode*p=new MyListNode(val,head-\u003enext);\rhead-\u003enext=p;\rhead-\u003eval++;\r}\rvoid addAtTail(int val) {\rauto p=head;\rMyListNode*k=new MyListNode(val,nullptr);\rwhile(p-\u003enext)\r{\rp=p-\u003enext;\r}\rp-\u003enext=k;\rhead-\u003eval++;\r}\rvoid addAtIndex(int index, int val) {\rif(index\u003ehead-\u003eval+1)\rreturn ;\rauto p=head;\rfor(int i=0;inext;\r}\rMyListNode*k=new MyListNode(val,p-\u003enext);\rp-\u003enext=k;\rhead-\u003eval++;\r}\rvoid deleteAtIndex(int index) {\rif(index\u003ehead-\u003eval||head-\u003eval==-1)\rreturn ;\rauto p=head;\rfor(int i=0;p\u0026\u0026inext;\r}\rauto x=p-\u003enext;\rp-\u003enext=x-\u003enext;\rdelete x;\rhead-\u003eval--;\r}\r};\r/**\r* Your MyLinkedList object will be instantiated and called as such:\r* MyLinkedList* obj = new MyLinkedList();\r* int param_1 = obj-\u003eget(index);\r* obj-\u003eaddAtHead(val);\r* obj-\u003eaddAtTail(val);\r* obj-\u003eaddAtIndex(index,val);\r* obj-\u003edeleteAtIndex(index);\r*/ #题目 206.反转链表 #使用头插法，不难\n/**\r* Definition for singly-linked list.\r* struct ListNode {\r* int val;\r* ListNode *next;\r* ListNode() : val(0), next(nullptr) {}\r* ListNode(int x) : val(x), next(nullptr) {}\r* ListNode(int x, ListNode *next) : val(x), next(next) {}\r* };\r*/\rclass Solution {\rpublic:\rListNode* reverseList(ListNode* head) {\rif(!head)\rreturn nullptr;\rListNode *p=head;\rListNode *new_node=new ListNode(0,nullptr);\rwhile(p)\r{\rauto q=p;\rp=p-\u003enext;\rq-\u003enext=new_node-\u003enext;\rnew_node-\u003enext=q;\r}\rreturn new_node-\u003enext;\r}\r}; ",
+  "wordCount" : "286",
+  "inLanguage": "zh",
+  "datePublished": "2026-01-14T12:00:00+08:00",
+  "dateModified": "2026-01-14T12:00:00+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hitcjj.github.io/posts/2026_1_15%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AC%94%E8%AE%B0/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PKER's 个人小记",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hitcjj.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://hitcjj.github.io/" accesskey="h" title="PKER&#39;s 个人小记 (Alt + H)">PKER&#39;s 个人小记</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://hitcjj.github.io/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://hitcjj.github.io/posts/" title="笔记">
+                    <span>笔记</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://hitcjj.github.io/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      代码随想录训练营第2天
+    </h1>
+    <div class="post-meta"><span title='2026-01-14 12:00:00 +0800 CST'>2026年1月14日</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>##题目<a href="https://leetcode.cn/problems/remove-linked-list-elements/">203.移除链表元素</a></p>
+<p>注意点：如果头节点可能被删除，那么要在头节点之前添加一个哨兵节点，这样我们无需特判头节点被删除的情况</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Definition for singly-linked list.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * struct ListNode {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *     int val;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *     ListNode *next;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *     ListNode() : val(0), next(nullptr) {}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *     ListNode(int x) : val(x), next(nullptr) {}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * };
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    ListNode<span style="color:#f92672">*</span> removeElements(ListNode<span style="color:#f92672">*</span> head, <span style="color:#66d9ef">int</span> val) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>head)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nullptr</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">auto</span> new_head<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> ListNode(<span style="color:#ae81ff">0</span>,head);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">auto</span> p<span style="color:#f92672">=</span>new_head;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(p<span style="color:#f92672">-&gt;</span>next)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(p<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">-&gt;</span>val<span style="color:#f92672">==</span>val)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                p<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">=</span>p<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>                p<span style="color:#f92672">=</span>p<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> new_head<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>#题目<a href="https://leetcode.cn/problems/design-linked-list/description/"> 707.设计链表 </a>
+#边界条件很容易错误</p>
+<pre tabindex="0"><code>
+ typedef struct MyListNode{
+        int val;
+        struct MyListNode* next;
+    }MyListNode;
+class MyLinkedList {
+
+public:
+    MyListNode* head;
+    MyLinkedList() {
+        head=new MyListNode(-1,nullptr);
+    }
+    
+    int get(int index) {
+         if(index&gt;=head-&gt;val+1)
+        return -1;
+        auto p=head;
+        for(int i=-1;i&lt;index;i++)
+        {
+            p=p-&gt;next;
+        }
+        return p-&gt;val;
+    }
+    
+    void addAtHead(int val) {
+        MyListNode*p=new MyListNode(val,head-&gt;next);
+        head-&gt;next=p;
+        head-&gt;val++;
+    }
+    
+    void addAtTail(int val) {
+        auto p=head;
+        MyListNode*k=new MyListNode(val,nullptr);
+        while(p-&gt;next)
+        {
+            p=p-&gt;next;
+        }
+        p-&gt;next=k;
+        head-&gt;val++;
+    }
+    
+    void addAtIndex(int index, int val) {
+        if(index&gt;head-&gt;val+1)
+        return ;
+        auto p=head;
+        for(int i=0;i&lt;index;i++)
+        {
+            p=p-&gt;next;
+        }
+        MyListNode*k=new MyListNode(val,p-&gt;next);
+        p-&gt;next=k;
+        head-&gt;val++;
+    }
+    
+    void deleteAtIndex(int index) {
+        if(index&gt;head-&gt;val||head-&gt;val==-1)
+        return ;
+        auto p=head;
+        for(int i=0;p&amp;&amp;i&lt;index;i++)
+        {
+            p=p-&gt;next;
+        }
+        auto x=p-&gt;next;
+        p-&gt;next=x-&gt;next;
+        delete x;
+        head-&gt;val--;
+    }
+};
+
+/**
+ * Your MyLinkedList object will be instantiated and called as such:
+ * MyLinkedList* obj = new MyLinkedList();
+ * int param_1 = obj-&gt;get(index);
+ * obj-&gt;addAtHead(val);
+ * obj-&gt;addAtTail(val);
+ * obj-&gt;addAtIndex(index,val);
+ * obj-&gt;deleteAtIndex(index);
+ */
+</code></pre><p>#题目<a href="https://leetcode.cn/problems/reverse-linked-list/"> 206.反转链表</a>
+#使用头插法，不难</p>
+<pre tabindex="0"><code>/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        if(!head)
+        return nullptr;
+        ListNode *p=head;
+        ListNode *new_node=new ListNode(0,nullptr);
+        while(p)
+        {
+            auto q=p;
+            p=p-&gt;next;
+            q-&gt;next=new_node-&gt;next;
+            new_node-&gt;next=q;
+        }
+        return new_node-&gt;next;
+
+    }
+};
+</code></pre>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://hitcjj.github.io/">PKER&#39;s 个人小记</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
